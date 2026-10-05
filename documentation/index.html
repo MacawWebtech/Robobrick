@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Documentation — RoboBricks HTML Template</title>
+<meta name="description" content="Setup, customisation and component reference for the RoboBricks kids robotics HTML template.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#FACC15">
+<link rel="canonical" href="https://robobricks.example.com/documentation/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="RoboBricks">
+<meta property="og:title" content="Documentation — RoboBricks HTML Template">
+<meta property="og:description" content="Setup, customisation and component reference for the RoboBricks kids robotics HTML template.">
+<meta property="og:url" content="https://robobricks.example.com/documentation/index.html">
+<meta property="og:image" content="https://robobricks.example.com/assets/img/hero-lab-bg.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Nunito:wght@700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link id="bs-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<script>(function(){try{var d=document.documentElement,t=localStorage.getItem('robotics-theme'),r=localStorage.getItem('robotics-dir');if(t)d.setAttribute('data-bs-theme',t);if(r==='rtl'){d.setAttribute('dir','rtl');var l=document.getElementById('bs-css');if(l)l.href=l.href.replace('bootstrap.min.css','bootstrap.rtl.min.css');}}catch(e){}})();</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+
+<link rel="stylesheet" href="../assets/css/rtl.css">
+<link rel="stylesheet" href="../assets/css/dashboard.css">
+<link rel="stylesheet" href="docs.css">
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="rb-header"><div class="container-rb bar"><a class="rb-logo " href="../pages/index.html" aria-label="RoboBricks home"><picture class="logo-light"><source srcset="../assets/img/logo.webp" type="image/webp"><img class="rb-logo-img" src="../assets/img/logo.png" alt="RoboBricks – Kids Robotics &amp; LEGO Building Club" width="720" height="238"></picture><picture class="logo-dark"><source srcset="../assets/img/logo-dark.webp" type="image/webp"><img class="rb-logo-img" src="../assets/img/logo-dark.png" alt="RoboBricks – Kids Robotics &amp; LEGO Building Club" width="720" height="238"></picture></a><span class="chip ms-2">Docs v1.0</span><div class="actions ms-auto"><button type="button" class="icon-btn " data-dir-toggle aria-pressed="false" title="Toggle text direction"><span class="font-tech fw-bold u-fs-70" data-dir-label>RTL</span></button>
+<button type="button" class="icon-btn" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode"><i class="bi bi-moon-stars theme-icon-light" aria-hidden="true"></i><i class="bi bi-sun theme-icon-dark" aria-hidden="true"></i></button><a class="btn-rb btn-sm" href="../pages/index.html">View template</a></div></div></header>
+<div class="doc-layout"><nav class="doc-nav toc" aria-label="Documentation sections"><a href="#intro">Introduction</a><a href="#install">Installation</a><a href="#structure">File structure</a><a href="#pages">Page list</a><a href="#brand">Colours & fonts</a><a href="#components">Components</a><a href="#hooks">JavaScript hooks</a><a href="#prefs">Dark mode & RTL</a><a href="#forms">Forms</a><a href="#images">Replacing images</a><a href="#seo">SEO & accessibility</a><a href="#credits">Credits</a><a href="#changelog">Changelog</a></nav><main id="main" class="doc-main">
+<section id="intro"><span class="eyebrow">Version 1.0 · October 2026</span><h1 class="display-1x">RoboBricks documentation</h1>
+<p class="lead">Thanks for choosing RoboBricks, a multipage HTML template for kids' robotics, LEGO engineering and coding clubs, with a full parent dashboard. This guide covers setup, customisation and every interactive feature.</p>
+<div class="row g-3 mt-2"><div class="col-sm-4"><div class="soft-card p-3"><strong class="text-ink d-block fs-3 u-ff-display">32</strong><span class="small">HTML pages</span></div></div>
+<div class="col-sm-4"><div class="soft-card p-3"><strong class="text-ink d-block fs-3 u-ff-display">0</strong><span class="small">Build tools required</span></div></div>
+<div class="col-sm-4"><div class="soft-card p-3"><strong class="text-ink d-block fs-3 u-ff-display">35</strong><span class="small">Real photos, with SVG fallbacks</span></div></div></div></section>
+
+<section id="install"><h2>Installation</h2><p>No build step. Upload the folder to any web host, or preview locally with a static server:</p>
+<pre class="doc-code"><code>npx serve .
+# or
+python3 -m http.server 8000</code></pre>
+<p>Bootstrap 5.3, Bootstrap Icons and Google Fonts load from CDNs. To self-host, download them, replace the URLs in each page's <code>&lt;head&gt;</code>, and update <code>BS_LTR</code> / <code>BS_RTL</code> at the top of <code>assets/js/main.js</code>.</p>
+<div class="doc-note"><i class="bi bi-info-circle-fill" aria-hidden="true"></i><span>Opening files directly with <code>file://</code> works, but some browsers restrict <code>localStorage</code> there. Use a local server to test theme and RTL persistence.</span></div></section>
+
+<section id="structure"><h2>File structure</h2>
+<pre class="doc-code"><code>/
+├── index.html             Entry point (forwards to pages/index.html)
+├── pages/                 16 public pages
+│   └── dashboard/         16 parent dashboard pages
+├── documentation/         This guide
+└── assets/
+    ├── css/style.css      Design tokens, components, public sections
+    ├── css/dashboard.css  Dashboard layout and widgets
+    ├── css/rtl.css        Right-to-left adjustments
+    ├── js/main.js         Shared behaviour (all pages)
+    ├── js/dashboard.js    Dashboard-only behaviour
+    └── img/               SVG illustrations, favicon, OG image</code></pre></section>
+
+<section id="pages"><h2>Page list</h2><h3 class="h5 mt-4">Public website</h3><div class="doc-pages"><a href="../pages/index.html" target="_blank" rel="noopener"><span class="font-tech small">pages/index.html</span><strong>Home 1</strong></a><a href="../pages/home-2.html" target="_blank" rel="noopener"><span class="font-tech small">pages/home-2.html</span><strong>Home 2 · The Maker Lab</strong></a><a href="../pages/about.html" target="_blank" rel="noopener"><span class="font-tech small">pages/about.html</span><strong>About</strong></a><a href="../pages/programs.html" target="_blank" rel="noopener"><span class="font-tech small">pages/programs.html</span><strong>Programs</strong></a><a href="../pages/program-details.html" target="_blank" rel="noopener"><span class="font-tech small">pages/program-details.html</span><strong>Program Details</strong></a><a href="../pages/instructors.html" target="_blank" rel="noopener"><span class="font-tech small">pages/instructors.html</span><strong>Instructors</strong></a><a href="../pages/showcase.html" target="_blank" rel="noopener"><span class="font-tech small">pages/showcase.html</span><strong>Showcase</strong></a><a href="../pages/events.html" target="_blank" rel="noopener"><span class="font-tech small">pages/events.html</span><strong>Events</strong></a><a href="../pages/gallery.html" target="_blank" rel="noopener"><span class="font-tech small">pages/gallery.html</span><strong>Gallery</strong></a><a href="../pages/blog.html" target="_blank" rel="noopener"><span class="font-tech small">pages/blog.html</span><strong>Blog</strong></a><a href="../pages/blog-details.html" target="_blank" rel="noopener"><span class="font-tech small">pages/blog-details.html</span><strong>Blog Details</strong></a><a href="../pages/faq.html" target="_blank" rel="noopener"><span class="font-tech small">pages/faq.html</span><strong>FAQ</strong></a><a href="../pages/contact.html" target="_blank" rel="noopener"><span class="font-tech small">pages/contact.html</span><strong>Contact</strong></a><a href="../pages/login.html" target="_blank" rel="noopener"><span class="font-tech small">pages/login.html</span><strong>Login</strong></a><a href="../pages/register.html" target="_blank" rel="noopener"><span class="font-tech small">pages/register.html</span><strong>Register</strong></a><a href="../pages/404.html" target="_blank" rel="noopener"><span class="font-tech small">pages/404.html</span><strong>404</strong></a></div><h3 class="h5 mt-4">Parent dashboard</h3><div class="doc-pages"><a href="../pages/dashboard/index.html" target="_blank" rel="noopener"><span class="font-tech small">pages/dashboard/index.html</span><strong>Overview</strong></a><a href="../pages/dashboard/children.html" target="_blank" rel="noopener"><span class="font-tech small">pages/dashboard/children.html</span><strong>My Children</strong></a><a href="../pages/dashboard/child-profile.html" target="_blank" rel="noopener"><span class="font-tech small">pages/dashboard/child-profile.html</span><strong>Child Profile</strong></a><a href="../pages/dashboard/programs.html" target="_blank" rel="noopener"><span class="font-tech small">pages/dashboard/programs.html</span><strong>Programs</strong></a><a href="../pages/dashboard/schedule.html" target="_blank" rel="noopener"><span class="font-tech small">pages/dashboard/schedule.html</span><strong>Schedule</strong></a><a href="../pages/dashboard/progress.html" target="_blank" rel="noopener"><span class="font-tech small">pages/dashboard/progress.html</span><strong>Project Progress</strong></a><a href="../pages/dashboard/badges.html" target="_blank" rel="noopener"><span class="font-tech small">pages/dashboard/badges.html</span><strong>Skill Badges</strong></a><a href="../pages/dashboard/achievements.html" target="_blank" rel="noopener"><span class="font-tech small">pages/dashboard/achievements.html</span><strong>Achievements</strong></a><a href="../pages/dashboard/showcase.html" target="_blank" rel="noopener"><span class="font-tech small">pages/dashboard/showcase.html</span><strong>Showcase Projects</strong></a><a href="../pages/dashboard/payments.html" target="_blank" rel="noopener"><span class="font-tech small">pages/dashboard/payments.html</span><strong>Payments</strong></a><a href="../pages/dashboard/payment-history.html" target="_blank" rel="noopener"><span class="font-tech small">pages/dashboard/payment-history.html</span><strong>Payment History</strong></a><a href="../pages/dashboard/invoices.html" target="_blank" rel="noopener"><span class="font-tech small">pages/dashboard/invoices.html</span><strong>Invoices</strong></a><a href="../pages/dashboard/messages.html" target="_blank" rel="noopener"><span class="font-tech small">pages/dashboard/messages.html</span><strong>Messages</strong></a><a href="../pages/dashboard/notifications.html" target="_blank" rel="noopener"><span class="font-tech small">pages/dashboard/notifications.html</span><strong>Notifications</strong></a><a href="../pages/dashboard/profile.html" target="_blank" rel="noopener"><span class="font-tech small">pages/dashboard/profile.html</span><strong>Profile Settings</strong></a><a href="../pages/dashboard/settings.html" target="_blank" rel="noopener"><span class="font-tech small">pages/dashboard/settings.html</span><strong>Account Settings</strong></a></div></section>
+
+<section id="brand"><h2>Colours &amp; fonts</h2><p>Every colour, radius and shadow is a CSS custom property at the top of <code>assets/css/style.css</code>. Change a value once and it updates across all 32 pages.</p>
+<div class="doc-swatches"><div class="doc-swatch"><span class="u-bg-black"></span><code>--rb-navy</code><small class="font-tech">#0A0A0A</small></div><div class="doc-swatch"><span class="u-bg-black"></span><code>--rb-blue</code><small class="font-tech">#0A0A0A</small></div><div class="doc-swatch"><span class="u-bg-yellow"></span><code>--rb-yellow</code><small class="font-tech">#FACC15</small></div><div class="doc-swatch"><span class="u-bg-yellow"></span><code>--rb-orange</code><small class="font-tech">#FACC15</small></div><div class="doc-swatch"><span class="u-bg-yellow"></span><code>--rb-mint</code><small class="font-tech">#FACC15</small></div><div class="doc-swatch"><span class="u-bg-white"></span><code>--rb-sky</code><small class="font-tech">#FFFFFF</small></div><div class="doc-swatch"><span class="u-bg-white"></span><code>--rb-white</code><small class="font-tech">#FFFFFF</small></div><div class="doc-swatch"><span class="u-bg-grey"></span><code>--rb-gray</code><small class="font-tech">#4E4E4E</small></div></div>
+<pre class="doc-code"><code>:root {
+  --rb-yellow: #FACC15;   /* primary CTA */
+  --rb-blue:   #0A0A0A;   /* black: secondary buttons (yellow in dark mode) */
+  --rb-shadow: 4px 4px 0 var(--rb-line);  /* brick shadow; set to none to soften */
+  --rb-font-display: "Nunito", system-ui, sans-serif;
+}</code></pre>
+<p>Dark mode values are in the <code>[data-bs-theme="dark"]</code> block directly below <code>:root</code>. Fonts: <strong>Nunito</strong> for headings, <strong>Manrope</strong> for body text, <strong>Space Grotesk</strong> for small technical labels. To swap fonts, update the three <code>--rb-font-*</code> tokens and the Google Fonts URL.</p></section>
+
+<section id="components"><h2>Components</h2><p>Live examples rendered with the template's own CSS.</p>
+<h3 class="h5 mt-4">Buttons</h3><div class="doc-demo d-flex flex-wrap gap-3"><a class="btn-rb" href="#components">Enroll Your Child</a><a class="btn-rb btn-blue" href="#components">Blue</a><a class="btn-rb btn-mint" href="#components">Mint</a><a class="btn-rb btn-ghost" href="#components">Ghost</a><a class="btn-rb btn-navy btn-sm" href="#components">Small navy</a><a class="btn-link-rb" href="#components">Text link <i class="bi bi-arrow-right" aria-hidden="true"></i></a></div>
+<pre class="doc-code"><code>&lt;a class="btn-rb" href="#"&gt;Enroll Your Child&lt;/a&gt;
+&lt;a class="btn-rb btn-blue btn-sm" href="#"&gt;Small blue&lt;/a&gt;</code></pre>
+<h3 class="h5 mt-4">Chips &amp; labels</h3><div class="doc-demo d-flex flex-wrap gap-2 align-items-center"><span class="eyebrow mb-0">Eyebrow label</span><span class="chip">Robotics</span><span class="chip chip-mint">Beginner</span><span class="chip chip-yellow">Intermediate</span><span class="chip chip-orange">Advanced</span><span class="chip chip-navy">Ages 8–10</span></div>
+<h3 class="h5 mt-4">Skill badges</h3><p class="small">Click an earned badge to play the unlock animation; click the locked one to see its hint.</p>
+<div class="doc-demo"><div class="badge-wall u-grid-fill-170"><button type="button" class="skill-badge"  aria-label="Robotics Explorer badge, Level 02">
+  <span class="shine"></span>
+  <span class="medal medal-orange"><i class="bi bi-robot" aria-hidden="true"></i><span class="lvl">LEVEL 02</span></span>
+  <h3>Robotics Explorer</h3>
+  <p>3 projects completed</p>
+</button><button type="button" class="skill-badge"  aria-label="Coding Starter badge, Level 01">
+  <span class="shine"></span>
+  <span class="medal medal-blue"><i class="bi bi-code-slash" aria-hidden="true"></i><span class="lvl">LEVEL 01</span></span>
+  <h3>Coding Starter</h3>
+  <p>5 programs written</p>
+</button><button type="button" class="skill-badge is-locked"  aria-label="Robo Master badge, Locked, locked">
+  <span class="shine"></span><span class="lock"><i class="bi bi-lock-fill" aria-hidden="true"></i></span>
+  <span class="medal medal-navy"><i class="bi bi-trophy" aria-hidden="true"></i><span class="lvl">LOCKED</span></span>
+  <h3>Robo Master</h3>
+  <p>Finish all four tracks</p>
+</button></div></div>
+<pre class="doc-code"><code>&lt;button type="button" class="skill-badge"&gt;
+  &lt;span class="shine"&gt;&lt;/span&gt;
+  &lt;span class="medal medal-orange"&gt;&lt;i class="bi bi-robot"&gt;&lt;/i&gt;&lt;span class="lvl"&gt;LEVEL 02&lt;/span&gt;&lt;/span&gt;
+  &lt;h3&gt;Robotics Explorer&lt;/h3&gt;&lt;p&gt;3 projects completed&lt;/p&gt;
+&lt;/button&gt;
+&lt;!-- add .is-locked plus a .lock span for locked badges --&gt;</code></pre>
+<h3 class="h5 mt-4">Program card</h3><div class="doc-demo"><div class="u-mw-320"><article class="prog-card accent-blue">
+  <div class="band dots">
+    <span class="age">Ages 8–10</span>
+    <h3>Junior Robotics</h3>
+    <img src="../assets/img/line tracker.jpg" data-fallback="../assets/img/build-line-robot.svg" alt="" width="800" height="600" loading="lazy">
+  </div>
+  <div class="body">
+    <p>Introduce children to sensors, motors, movement, and beginner robotics.</p>
+    <ul class="spec-list">
+      <li><span>Skill level</span>Beginner</li>
+      <li><span>Duration</span>10 weeks</li>
+      <li><span>Sessions</span>20 × 90 min</li>
+      <li><span>Class size</span>Max 10 kids</li>
+      <li><span>Instructor</span>Maya Sharma</li>
+      <li><span>Next start</span>Sat, Oct 10</li>
+    </ul>
+    <div class="foot">
+      <div class="price">₹2,499 <small>/ month</small></div>
+      <a class="btn-rb btn-sm" href="../pages/program-details.html?p=junior-robotics" aria-label="View Junior Robotics program">View Program</a>
+    </div>
+  </div>
+</article></div></div>
+<p class="small">Program cards are generated from the same markup on every page; colours come from <code>.accent-yellow</code>, <code>.accent-blue</code>, <code>.accent-orange</code> or <code>.accent-mint</code>.</p>
+<h3 class="h5 mt-4">Progress</h3><div class="doc-demo"><div class="d-flex flex-wrap gap-4 align-items-center"><div class="ring" data-ring="78"><span>78%<small>Progress</small></span></div><div class="flex-grow-1 u-minw-220"><div class="mini-bar u-h-10"><span class="u-bg-mint" data-progress="64"></span></div><p class="small mt-2 mb-0">.mini-bar with data-progress="64"</p></div></div></div></section>
+
+<section id="hooks"><h2>JavaScript hooks</h2><p>Interactive behaviour is attached through data attributes, so you can reuse any feature on any page without touching JavaScript.</p>
+<div class="table-wrap soft-card"><table class="rb-table"><thead><tr><th>Attribute</th><th>What it does</th></tr></thead><tbody><tr><td><code>data-reveal</code></td><td>Fades the element in when it scrolls into view.</td></tr><tr><td><code>data-count="1800" data-suffix="+"</code></td><td>Animated number counter.</td></tr><tr><td><code>data-progress="78"</code></td><td>Animates a bar's width to 78%.</td></tr><tr><td><code>data-ring="78"</code></td><td>Animates a .ring progress circle.</td></tr><tr><td><code>data-finder</code></td><td>Program finder. Edit the PROGRAMS array in main.js.</td></tr><tr><td><code>data-filter-group="#id"</code></td><td>Filter buttons for children of #id with data-cat.</td></tr><tr><td><code>data-faq-search</code></td><td>Live FAQ search with highlighting.</td></tr><tr><td><code>form[data-validate]</code></td><td>Validation; data-success sets the toast, data-redirect navigates.</td></tr><tr><td><code>data-lightbox="file.svg"</code></td><td>Opens an image in the gallery modal.</td></tr><tr><td><code>data-countdown="ISO date"</code></td><td>Live event countdown.</td></tr><tr><td><code>data-toast="Message"</code></td><td>Shows a toast on click.</td></tr><tr><td><code>data-theme-toggle / data-dir-toggle</code></td><td>Turns any button into a theme or direction switch.</td></tr><tr><td><code>data-calendar</code></td><td>Dashboard calendar; sessions live in SESSIONS in dashboard.js.</td></tr><tr><td><code>data-messages</code></td><td>Dashboard chat behaviour.</td></tr><tr><td><code>data-table-search="#table"</code></td><td>Live table filter.</td></tr></tbody></table></div>
+<p class="mt-3">Show a toast from your own scripts with <code>window.RoboBricks.toast("Saved")</code>.</p></section>
+
+<section id="prefs"><h2>Dark mode &amp; RTL</h2><p>Both preferences are saved in <code>localStorage</code> and applied by a tiny inline script before the page renders, so there's no flash of the wrong theme.</p>
+<div class="table-wrap soft-card"><table class="rb-table"><thead><tr><th>Key</th><th>Values</th><th>Toggle</th></tr></thead><tbody><tr><td><code>robotics-theme</code></td><td>light / dark</td><td><code>data-theme-toggle</code></td></tr><tr><td><code>robotics-dir</code></td><td>ltr / rtl</td><td><code>data-dir-toggle</code></td></tr></tbody></table></div>
+<div class="doc-demo d-flex flex-wrap gap-2 mt-3"><button type="button" class="btn-rb btn-ghost btn-sm" data-theme-toggle><i class="bi bi-circle-half" aria-hidden="true"></i>Try dark mode</button><button type="button" class="btn-rb btn-ghost btn-sm" data-dir-toggle><i class="bi bi-translate" aria-hidden="true"></i>Try <span data-dir-label class="ms-1">RTL</span></button></div>
+<p class="mt-3">To make RTL the default for an Arabic or Hebrew site, set <code>&lt;html lang="ar" dir="rtl"&gt;</code> and point the <code>#bs-css</code> link at <code>bootstrap.rtl.min.css</code>. Layout uses CSS logical properties, so sidebars, timelines, progress bars and forms mirror automatically.</p>
+<div class="doc-note"><i class="bi bi-info-circle-fill" aria-hidden="true"></i><span>With the English demo copy, RTL shows punctuation at the start of headings. This disappears once you add real right-to-left text.</span></div></section>
+
+<section id="forms"><h2>Forms</h2><p>Contact, login, register, enrollment and dashboard forms validate in the browser and show a success toast. To send data to your server, replace the <code>setTimeout</code> inside the <code>form[data-validate]</code> handler in <code>main.js</code>:</p>
+<pre class="doc-code"><code>const res = await fetch(form.action, { method: "POST", body: new FormData(form) });
+if (!res.ok) { toast("Something went wrong. Try again.", "bi-exclamation-circle-fill"); return; }
+toast(form.dataset.success);</code></pre></section>
+
+<section id="images"><h2>Replacing images</h2><p>The demo uses real photos from Pexels and Unsplash (free for commercial use, credited in <code>CREDITS.md</code>). They're hotlinked from the providers' CDNs rather than bundled, because both licences forbid redistributing the files inside a product. Each image carries a <code>data-fallback</code> SVG, and <code>main.js</code> swaps it in automatically if the photo can't load.</p>
+<pre class="doc-code"><code>&lt;img src="../assets/img/club-hero.jpg"
+     data-fallback="../assets/img/hero-makerspace.svg"
+     alt="Kids building a rover at Saturday class" width="1600" height="1400"&gt;</code></pre>
+<p>For a live site, use your own club photos or download and self-host the demo photos. Keep the <code>width</code>/<code>height</code> attributes for layout stability. Recommended sizes:</p>
+<div class="table-wrap soft-card"><table class="rb-table"><thead><tr><th>Area</th><th>Ratio</th><th>Suggested size</th></tr></thead><tbody>
+<tr><td>Home hero</td><td>5:4.4</td><td>1600 × 1400</td></tr><tr><td>Project / showcase images</td><td>4:3</td><td>1200 × 900</td></tr><tr><td>Instructor portraits</td><td>~1:1.05</td><td>800 × 840</td></tr><tr><td>Blog thumbnails</td><td>16:10.5</td><td>1200 × 790</td></tr><tr><td>Open Graph image</td><td>1.91:1</td><td>1200 × 630</td></tr></tbody></table></div>
+<div class="doc-note"><i class="bi bi-shield-lock-fill" aria-hidden="true"></i><span>Always get written parent consent before publishing photos of your own students.</span></div></section>
+
+<section id="seo"><h2>SEO &amp; accessibility</h2><ul class="doc-list">
+<li>Replace <code>https://robobricks.example.com</code> with your domain in canonical, Open Graph and JSON-LD tags (one search-and-replace).</li>
+<li>Structured data included: EducationalOrganization, Course, Event, Article, FAQPage, BreadcrumbList.</li>
+<li>One <code>&lt;h1&gt;</code> per page, landmark regions, skip link, visible focus outlines and keyboard-operable tabs.</li>
+<li>Filters, FAQ search and toasts announce changes through ARIA live regions.</li>
+<li>Animations respect <code>prefers-reduced-motion</code>.</li>
+<li>Dashboard pages carry <code>noindex, nofollow</code>.</li></ul></section>
+
+<section id="credits"><h2>Credits</h2><ul class="doc-list"><li>Bootstrap 5.3 · MIT licence</li><li>Bootstrap Icons · MIT licence</li><li>Nunito, Manrope, Space Grotesk · SIL Open Font Licence</li><li>Photography · Pexels &amp; Unsplash photographers (full list in CREDITS.md)</li><li>Fallback illustrations · original, included with the template</li></ul>
+<p class="small">LEGO® is a trademark of the LEGO Group, which does not sponsor or endorse this template.</p></section>
+
+<section id="changelog"><h2>Changelog</h2><div class="history"><div class="history-item pb-0"><span class="yr">v1.0 · October 1, 2026</span><p class="mb-0">Initial release: 16 public pages, 16 dashboard pages, light/dark themes, RTL support.</p></div><div class="history-item pb-0 mt-3"><span class="yr">v1.1 · October 1, 2026</span><p class="mb-0">Real photography across all pages, with automatic SVG fallbacks.</p></div></div></section></main></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+</body></html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Account Settings — RoboBricks Parent Portal</title>
+<meta name="description" content="RoboBricks parent dashboard: account settings.">
+<meta name="theme-color" content="#FACC15">
+<link rel="canonical" href="https://robobricks.example.com/pages/dashboard/settings.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="RoboBricks">
+<meta property="og:title" content="Account Settings — RoboBricks Parent Portal">
+<meta property="og:description" content="RoboBricks parent dashboard: account settings.">
+<meta property="og:url" content="https://robobricks.example.com/pages/dashboard/settings.html">
+<meta property="og:image" content="https://robobricks.example.com/assets/img/hero-lab-bg.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Nunito:wght@700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link id="bs-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<script>(function(){try{var d=document.documentElement,t=localStorage.getItem('robotics-theme'),r=localStorage.getItem('robotics-dir');if(t)d.setAttribute('data-bs-theme',t);if(r==='rtl'){d.setAttribute('dir','rtl');var l=document.getElementById('bs-css');if(l)l.href=l.href.replace('bootstrap.min.css','bootstrap.rtl.min.css');}}catch(e){}})();</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/dashboard.css">
+<link rel="stylesheet" href="../../assets/css/rtl.css">
+
+
+</head>
+<body class="dash-body">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="dash">
+<aside class="dash-side" id="dashSide" aria-label="Dashboard">
+  <div class="d-flex align-items-center justify-content-between"><a class="rb-logo " href="../index.html" aria-label="RoboBricks home"><picture class="logo-light"><source srcset="../../assets/img/logo.webp" type="image/webp"><img class="rb-logo-img" src="../../assets/img/logo.png" alt="RoboBricks – Kids Robotics &amp; LEGO Building Club" width="720" height="238"></picture><picture class="logo-dark"><source srcset="../../assets/img/logo-dark.webp" type="image/webp"><img class="rb-logo-img" src="../../assets/img/logo-dark.png" alt="RoboBricks – Kids Robotics &amp; LEGO Building Club" width="720" height="238"></picture></a><button type="button" class="icon-btn side-close u-ghost-dark" aria-label="Close menu"><i class="bi bi-x-lg" aria-hidden="true"></i></button></div>
+  <nav aria-label="Dashboard sections"><span class="side-label">Learning</span><ul class="side-nav"><li><a href="index.html"><i class="bi bi-grid-1x2" aria-hidden="true"></i>Overview</a></li><li><a href="children.html"><i class="bi bi-people" aria-hidden="true"></i>My Children</a></li><li><a href="programs.html"><i class="bi bi-journal-code" aria-hidden="true"></i>Programs</a></li><li><a href="schedule.html"><i class="bi bi-calendar3" aria-hidden="true"></i>Schedule<span class=count data-unread-count>3</span></a></li><li><a href="progress.html"><i class="bi bi-kanban" aria-hidden="true"></i>Projects</a></li><li><a href="badges.html"><i class="bi bi-award" aria-hidden="true"></i>Skill Badges</a></li><li><a href="achievements.html"><i class="bi bi-trophy" aria-hidden="true"></i>Achievements</a></li></ul><span class="side-label">Account</span><ul class="side-nav"><li><a href="payments.html"><i class="bi bi-credit-card" aria-hidden="true"></i>Payments</a></li><li><a href="messages.html"><i class="bi bi-chat-dots" aria-hidden="true"></i>Messages<span class=count data-unread-count>2</span></a></li><li><a href="notifications.html"><i class="bi bi-bell" aria-hidden="true"></i>Notifications<span class=count data-unread-count>4</span></a></li><li><a href="settings.html" aria-current="page"><i class="bi bi-gear" aria-hidden="true"></i>Settings</a><ul class="side-sub"><li><a href="profile.html">Profile Settings</a></li><li><a href="settings.html" aria-current=page>Account Settings</a></li></ul></li></ul></nav>
+  <div class="side-help"><strong>Need help?</strong>Front desk replies within 2 hours on class days.<a class="btn-rb btn-sm w-100 mt-2" href="messages.html">Message us</a></div>
+  <div class="side-profile"><img src="../../assets/img/avatar-priya.svg" data-fallback="../../assets/img/avatar-priya.svg" alt="" width="40" height="40"><div><strong>Priya Sharma</strong><span>Parent account</span></div><a href="../login.html" aria-label="Log out"><i class="bi bi-box-arrow-right" aria-hidden="true"></i></a></div>
+</aside>
+<div class="dash-backdrop" aria-hidden="true"></div>
+<div class="dash-main">
+<header class="dash-top">
+  <button type="button" class="icon-btn side-toggle" aria-controls="dashSide" aria-expanded="false" aria-label="Open menu"><i class="bi bi-list fs-5" aria-hidden="true"></i></button>
+  <form class="dash-search" role="search" onsubmit="event.preventDefault()"><i class="bi bi-search" aria-hidden="true"></i><label class="visually-hidden" for="dsearch">Search the dashboard</label><input id="dsearch" type="search" placeholder="Search sessions, projects, invoices…"></form>
+  <div class="tools">
+    <button type="button" class="icon-btn " data-dir-toggle aria-pressed="false" title="Toggle text direction"><span class="font-tech fw-bold u-fs-70" data-dir-label>RTL</span></button>
+<button type="button" class="icon-btn" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode"><i class="bi bi-moon-stars theme-icon-light" aria-hidden="true"></i><i class="bi bi-sun theme-icon-dark" aria-hidden="true"></i></button>
+    <div class="dropdown">
+      <button class="icon-btn notif-btn" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" aria-label="Notifications, 4 unread"><i class="bi bi-bell" aria-hidden="true"></i><span class="dot"></span></button>
+      <div class="dropdown-menu dropdown-menu-end notif-menu"><div class="hd"><strong class="text-ink">Notifications</strong><button type="button" class="btn btn-link btn-sm p-0 fw-bold text-decoration-none" data-mark-read>Mark all read</button></div><a class="notif-item unread" href="notifications.html"><span class="ic bg-y"><i class="bi bi-award" aria-hidden="true"></i></span><span><strong>Aarav earned a badge</strong>Sensor Specialist · Level 01<br><span class="font-tech u-fs-70">10 min ago</span></span></a><a class="notif-item unread" href="notifications.html"><span class="ic bg-m"><i class="bi bi-check2-circle" aria-hidden="true"></i></span><span><strong>Session confirmed</strong>Junior Robotics, Sat Oct 10, 10:00 AM<br><span class="font-tech u-fs-70">1 hr ago</span></span></a><a class="notif-item unread" href="notifications.html"><span class="ic bg-b"><i class="bi bi-chat-dots" aria-hidden="true"></i></span><span><strong>New message from Maya</strong>“Aarav's rover passed the ramp test today…”<br><span class="font-tech u-fs-70">3 hrs ago</span></span></a><a class="notif-item unread" href="notifications.html"><span class="ic bg-o"><i class="bi bi-receipt" aria-hidden="true"></i></span><span><strong>Invoice ready</strong>INV-2026-0918 · ₹4,748<br><span class="font-tech u-fs-70">Yesterday</span></span></a><a class="d-block text-center p-2 small fw-bold" href="notifications.html">View all</a></div>
+    </div>
+    <div class="dropdown">
+      <button class="user-chip" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="../../assets/img/avatar-priya.svg" data-fallback="../../assets/img/avatar-priya.svg" alt="" width="36" height="36"><span>Priya</span><i class="bi bi-chevron-down small" aria-hidden="true"></i></button>
+      <ul class="dropdown-menu dropdown-menu-end"><li><a class="dropdown-item" href="profile.html"><i class="bi bi-person me-2" aria-hidden="true"></i>Profile</a></li><li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2" aria-hidden="true"></i>Account settings</a></li><li><a class="dropdown-item" href="../index.html"><i class="bi bi-house me-2" aria-hidden="true"></i>Back to website</a></li><li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="../login.html"><i class="bi bi-box-arrow-right me-2" aria-hidden="true"></i>Log out</a></li></ul>
+    </div>
+  </div>
+</header>
+<main id="main" class="dash-content">
+  <div class="dash-head"><div><nav class="crumb" aria-label="Breadcrumb"><a href="index.html">Dashboard</a> / Settings</nav><h1>Account settings</h1></div></div>
+  <div class="row g-4"><div class="col-lg-3"><nav class="settings-nav panel p-2" aria-label="Settings sections"><a href="profile.html" class=""><i class="bi bi-person" aria-hidden="true"></i>Profile</a><a href="settings.html#account" class="on"><i class="bi bi-shield-lock" aria-hidden="true"></i>Account</a><a href="settings.html#notify" class=""><i class="bi bi-bell" aria-hidden="true"></i>Notifications</a><a href="settings.html#display" class=""><i class="bi bi-palette" aria-hidden="true"></i>Display</a><a href="settings.html#danger" class=""><i class="bi bi-x-octagon" aria-hidden="true"></i>Close account</a></nav></div><div class="col-lg-9 d-grid gap-4">
+<section class="panel" id="account"><h2 class="h5 mb-3">Account security</h2><form class="rb-form row g-3" data-validate data-success="Password updated.">
+<div class="col-md-4"><label class="form-label" for="s-c">Current password</label><input class="form-control" id="s-c" type="password" required autocomplete="current-password"><div class="invalid-feedback">Required.</div></div>
+<div class="col-md-4"><label class="form-label" for="s-n">New password</label><input class="form-control" id="s-n" type="password" required minlength="8" autocomplete="new-password" data-pw><div class="invalid-feedback">At least 8 characters.</div></div>
+<div class="col-md-4"><label class="form-label" for="s-r">Confirm</label><input class="form-control" id="s-r" type="password" required autocomplete="new-password" data-pw-confirm><div class="invalid-feedback">Passwords don't match.</div></div>
+<div class="col-12"><button class="btn-rb btn-sm" type="submit">Update password</button></div></form>
+<div class="switch-row"><div><strong>Two-step verification</strong><span>Get a code by SMS when signing in on a new device.</span></div><div class="form-check form-switch m-0"><input class="form-check-input" type="checkbox" role="switch" id="tfa" checked aria-label="Two-step verification"></div></div><div class="switch-row"><div><strong>Pickup PIN</strong><span>Require a 4-digit PIN at pickup in addition to photo ID.</span></div><div class="form-check form-switch m-0"><input class="form-check-input" type="checkbox" role="switch" id="pickup" aria-label="Pickup PIN"></div></div></section>
+<section class="panel" id="notify"><h2 class="h5 mb-1">Notifications</h2><p class="small">Choose what we send you outside the portal.</p>
+<div class="switch-row"><div><strong>Session reminders</strong><span>SMS the evening before each session.</span></div><div class="form-check form-switch m-0"><input class="form-check-input" type="checkbox" role="switch" id="n1" checked aria-label="Session reminders"></div></div><div class="switch-row"><div><strong>Mentor notes</strong><span>Email when a mentor writes a progress note.</span></div><div class="form-check form-switch m-0"><input class="form-check-input" type="checkbox" role="switch" id="n2" checked aria-label="Mentor notes"></div></div><div class="switch-row"><div><strong>Badges and achievements</strong><span>Email when your child earns a badge.</span></div><div class="form-check form-switch m-0"><input class="form-check-input" type="checkbox" role="switch" id="n3" checked aria-label="Badges and achievements"></div></div><div class="switch-row"><div><strong>Payment receipts</strong><span>Email every receipt and invoice.</span></div><div class="form-check form-switch m-0"><input class="form-check-input" type="checkbox" role="switch" id="n4" checked aria-label="Payment receipts"></div></div><div class="switch-row"><div><strong>Newsletter</strong><span>One email a month with STEM ideas.</span></div><div class="form-check form-switch m-0"><input class="form-check-input" type="checkbox" role="switch" id="n5" aria-label="Newsletter"></div></div></section>
+<section class="panel" id="display"><h2 class="h5 mb-1">Display</h2><p class="small">Saved on this device.</p>
+<div class="switch-row"><div><strong>Theme</strong><span>Switch between light and dark mode.</span></div><button type="button" class="btn-rb btn-ghost btn-sm" data-theme-toggle aria-label="Toggle theme"><i class="bi bi-circle-half" aria-hidden="true"></i>Toggle theme</button></div>
+<div class="switch-row"><div><strong>Text direction</strong><span>Right-to-left layout for Arabic and Hebrew.</span></div><button type="button" class="btn-rb btn-ghost btn-sm" data-dir-toggle><i class="bi bi-translate" aria-hidden="true"></i>Switch to <span data-dir-label class="ms-1">RTL</span></button></div></section>
+<section class="danger-zone" id="danger"><h2 class="h5">Close account</h2><p class="small">Cancels all enrollments at the end of the current billing period and deletes your data after 30 days. Certificates and invoices stay downloadable until then.</p><button type="button" class="btn btn-outline-danger btn-sm fw-bold" data-bs-toggle="modal" data-bs-target="#closeAcct">Close my account</button></section>
+</div></div>
+<div class="modal fade rb-modal" id="closeAcct" tabindex="-1" aria-labelledby="closeLbl" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h2 class="modal-title h5" id="closeLbl">Close your account?</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+<div class="modal-body"><p class="mb-0">Aarav and Diya will keep attending until October 15. After that, both enrollments end and you won't be charged again.</p></div>
+<div class="modal-footer"><button type="button" class="btn-rb btn-ghost btn-sm" data-bs-dismiss="modal">Keep my account</button><button type="button" class="btn btn-danger btn-sm fw-bold" data-bs-dismiss="modal" data-toast="Closure scheduled for October 15 (demo)">Close account</button></div></div></div></div>
+</main>
+<footer class="dash-foot"><span>© 2026 RoboBricks Parent Portal</span><span><a href="../faq.html">Help centre</a> · <a href="../contact.html">Contact</a> · <a href="#">Privacy</a></span></footer>
+</div>
+</div>
+<div class="modal fade rb-modal" id="rescheduleModal" tabindex="-1" aria-labelledby="reschLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+  <div class="modal-header"><h2 class="modal-title h5" id="reschLabel">Request a change</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+  <form class="rb-form" data-validate data-success="Request sent. The front desk will confirm by message.">
+    <div class="modal-body d-grid gap-3">
+      <div><label class="form-label" for="rs-type">What do you need?</label><select class="form-select" id="rs-type" required><option value="">Choose one</option><option>Book a make-up session</option><option>Move to a different batch</option><option>Report an absence</option><option>Something else</option></select><div class="invalid-feedback">Choose a request type.</div></div>
+      <div><label class="form-label" for="rs-date">Preferred date</label><input class="form-control" id="rs-date" type="date" min="2026-10-01"></div>
+      <div><label class="form-label" for="rs-note">Note for the front desk</label><textarea class="form-control" id="rs-note" rows="3" placeholder="Optional"></textarea></div>
+    </div>
+    <div class="modal-footer"><button type="button" class="btn-rb btn-ghost btn-sm" data-bs-dismiss="modal">Cancel</button><button type="submit" class="btn-rb btn-sm">Send request</button></div>
+  </form>
+</div></div></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="../../assets/js/main.js" defer></script>
+<script src="../../assets/js/dashboard.js" defer></script>
+</body></html>

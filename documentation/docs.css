@@ -1,0 +1,20 @@
+/* Documentation page styles */
+.doc-layout{display:grid;grid-template-columns:260px minmax(0,1fr);gap:3rem;max-width:1240px;margin:0 auto;padding:2rem clamp(1rem,4vw,2rem) 5rem}
+.doc-nav{position:sticky;top:96px;align-self:start;display:flex;flex-direction:column;gap:2px;max-height:calc(100vh - 120px);overflow:auto}
+.doc-nav a{padding:.5rem .8rem;border-radius:10px;color:var(--rb-ink);text-decoration:none;font-weight:700;font-size:.92rem;border-inline-start:3px solid transparent}
+.doc-nav a:hover,.doc-nav a.active{background:var(--rb-sky);border-color:var(--rb-yellow)}
+.doc-main section{padding-block:2.2rem;border-bottom:1.5px dashed var(--rb-hair);scroll-margin-top:90px}
+.doc-main h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:1rem}
+.doc-code{background:var(--rb-navy);color:#FFF3B0;border-radius:14px;padding:1.1rem 1.2rem;font-size:.85rem;overflow-x:auto;margin:1rem 0;direction:ltr;text-align:left}
+.doc-main :not(pre)>code{background:var(--rb-bg-alt);color:var(--rb-blue-ink);padding:.1rem .4rem;border-radius:6px;font-size:.88em}
+.doc-demo{border:1.5px dashed var(--rb-hair);border-radius:var(--rb-r);padding:1.4rem;background:var(--rb-bg-alt);margin:1rem 0}
+.doc-note{display:flex;gap:.75rem;padding:1rem 1.1rem;border-radius:14px;background:var(--rb-sky);color:var(--rb-ink);font-size:.92rem;margin:1rem 0}
+.doc-note i{color:var(--rb-blue-ink);font-size:1.1rem}
+.doc-swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.8rem;margin:1.2rem 0}
+.doc-swatch{border:1px solid var(--rb-hair);border-radius:14px;padding:.6rem;background:var(--rb-surface);display:flex;flex-direction:column;gap:.2rem}
+.doc-swatch span{height:56px;border-radius:10px;border:1.5px solid var(--rb-hair);margin-bottom:.3rem}
+.doc-pages{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.6rem}
+.doc-pages a{display:flex;flex-direction:column;padding:.8rem 1rem;border:1.5px solid var(--rb-hair);border-radius:14px;text-decoration:none;background:var(--rb-surface);color:var(--rb-muted)}
+.doc-pages a:hover{border-color:var(--rb-ink)}.doc-pages strong{color:var(--rb-ink)}
+.doc-list li{margin-bottom:.5rem}
+@media (max-width:991.98px){.doc-layout{grid-template-columns:1fr}.doc-nav{position:static;flex-direction:row;overflow-x:auto;max-height:none}.doc-nav a{white-space:nowrap}}
