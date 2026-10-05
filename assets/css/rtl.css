@@ -1,0 +1,40 @@
+/* ==========================================================================
+   RoboBricks — RTL support (Arabic / Hebrew)
+   Activated by <html dir="rtl">. Preference key: localStorage "robotics-dir".
+   The theme loads bootstrap.rtl.min.css automatically when RTL is active.
+   Most layout already uses CSS logical properties (inset-inline, margin-inline,
+   padding-inline, border-inline), so this file only handles what can't be
+   expressed logically: directional icons, transforms and fonts.
+   ========================================================================== */
+
+[dir="rtl"] body { font-family: "Noto Sans Arabic", "Rubik", var(--rb-font-body); }
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4,
+[dir="rtl"] .display-hero { letter-spacing: 0; }
+
+/* Directional icons: arrows, chevrons, "go" glyphs */
+[dir="rtl"] .bi-arrow-right, [dir="rtl"] .bi-arrow-left,
+[dir="rtl"] .bi-arrow-right-short, [dir="rtl"] .bi-arrow-left-short,
+[dir="rtl"] .bi-chevron-right, [dir="rtl"] .bi-chevron-left,
+[dir="rtl"] .bi-arrow-up-right, [dir="rtl"] .bi-box-arrow-right,
+[dir="rtl"] .bi-send, [dir="rtl"] .bi-reply { display: inline-block; transform: scaleX(-1); }
+[dir="rtl"] .btn-link-rb:hover i { transform: scaleX(-1) translateX(3px); }
+
+/* Progress fills follow inline direction automatically (flex/logical props); stripes mirror here */
+[dir="rtl"] .xp-bar span { background: repeating-linear-gradient(-45deg, var(--rb-yellow) 0 12px, #FACC15 12px 24px); }
+
+/* Text-free mascot illustrations mirror so they face the content. Illustrations
+   that contain text (hero, project art) are intentionally not mirrored. */
+[dir="rtl"] .cta-band .robot-peek,
+[dir="rtl"] .welcome .robot { transform: scaleX(-1); }
+
+/* Bootstrap's RTL build already mirrors offcanvas, form-check, form-select and breadcrumbs. */
+/* Form fields */
+[dir="rtl"] input[type="email"], [dir="rtl"] input[type="tel"] { direction: ltr; text-align: right; }
+
+/* Dashboard */
+[dir="rtl"] .cal-grid { direction: rtl; }
+[dir="rtl"] .notif-menu { text-align: right; }
+
+/* Number/date tokens stay LTR inside RTL text */
+[dir="rtl"] .num, [dir="rtl"] .price, [dir="rtl"] .val, [dir="rtl"] .amt,
+[dir="rtl"] .pay-card-vis .no, [dir="rtl"] time { unicode-bidi: plaintext; }
