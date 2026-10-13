@@ -1458,3 +1458,8 @@ img[data-fallback] { background: var(--rb-sky); }
 /* Schedule calendar (classes used by dashboard.js) */
 .ev-accent { border-inline-start: 5px solid #FACC15 !important; }
 .ev-dot { background: #FACC15; }
+
+/* Home 2 hero: centered content with comfortable padding */
+.lab-hero { padding-block: clamp(7rem, 12vw, 9rem) clamp(4rem, 8vw, 6rem); text-align: center; }
+.lab-hero .lab-hero-lead { max-width: 44rem; }
+.lab-hero h1 .line { padding-inline: .1em; }
